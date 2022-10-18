@@ -13,6 +13,6 @@ function show(req, res) {
 
 function index(req, res) {
     res.render('skills/index', {
-      todos: Skill.getAll()
+      skills: Skill.getAll()
     });
 }
