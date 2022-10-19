@@ -1,13 +1,32 @@
 body {
+  height: 100vh;
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   font-family: 'Exo 2', sans-serif;
+  background-image: linear-gradient(purple, white);
+  font-size: 3.5vmin;
+  font-weight: bolder;
+}
+
+h1 {
+  margin-top: -0.5vmin;
+  font-size: 10vmin;
+  font-weight: 900;
 }
 
 a {
-  color: #00B7FF;
+  text-decoration: none;
+  color: white;
+  transition: 100ms;
 }
 
 li {
   list-style: none;
+}
+
+#home {
+  font-size: 7vmin;
+}
+
+a:hover {
+  text-decoration: underline;
 }
