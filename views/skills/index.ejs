@@ -1,15 +1,23 @@
 <%- include('../partials/head') %>
-<body>
-    <a id="home" href="/">Home</a>
-    <h1>All of My Skills</h1>
-    <ul>
-      <% skills.forEach(function(t) { %>
-        <li>
-          <a href="/skills/<%= t.id %>"><%= t.skill %></a>
-            -
-          <%= t.complete ? 'Achieved' : 'Not Achieved Yet' %>
-        </li>
-      <% }); %>
-    </ul>
-</body>
-</html>
+
+<h3>My Skills as of <%= time %></h3>
+
+<ul>
+  <% skills.forEach(function(s) { %>
+    <li>
+      <form
+      action="/skills/<%= s.id %>?_method=DELETE"
+      method="POST"
+      class="delete-form"
+    >
+      <button type="submit">X</button>
+    </form>
+      <a href="/skills/<%= s.id %>"><%= s.skill %></a>
+        -
+      <%= s.complete ? 'Achieved' : 'Not Achieved Yet' %>
+    </li>
+  <% }); %>
+</ul>
+<a href="/skills/new">Add To-Do</a>
+
+<%- include('../partials/footer') %>
